@@ -32,8 +32,8 @@ TEST_F(NumberAddSubtractTest, IncrementsNumber) {
         e++;
         g++;
     }
-    EXPECT_EQ(b, cjr::number<>(200));
-    EXPECT_EQ(g, cjr::number<>(75));
+    EXPECT_EQ(e, cjr::number<>(200));
+    EXPECT_EQ(g, cjr::number<>(85));
 }
 
 TEST_F(NumberAddSubtractTest, DecrementsNumber) {
@@ -49,15 +49,15 @@ TEST_F(NumberAddSubtractTest, DecrementsNumber) {
     EXPECT_EQ(f, cjr::number<>(-90));
 
     // with operator
-    f--;
-    ASSERT_EQ(f, cjr::number<>(9));
+    b--;
+    ASSERT_EQ(b, cjr::number<>(22));
 
     for(unsigned int i = 0; i < 100; i++) {
         e--;
         g--;
     }
-    EXPECT_EQ(b, cjr::number<>(0));
-    EXPECT_EQ(g, cjr::number<>(-125));
+    EXPECT_EQ(e, cjr::number<>(0));
+    EXPECT_EQ(g, cjr::number<>(-115));
 }
 
 TEST_F(NumberAddSubtractTest, AddsNumbers) {

@@ -63,7 +63,7 @@ namespace cjr {
     }
 
     template<class B>
-    const number<B> number<B>::operator++(number<B>) {
+    const number<B> number<B>::operator++(int) {
         const auto thisBeforeIncrementation = number<B>(*this);
         this->increment();
 
@@ -124,7 +124,7 @@ namespace cjr {
     }
 
     template<class B>
-    const number<B> number<B>::operator--(number<B>) {
+    const number<B> number<B>::operator--(int) {
         const auto thisBeforeDecrementation = number<B>(*this);
         this->decrement();
 

@@ -118,7 +118,7 @@ namespace cjr {
         /// \brief Pre-increments the number
         void operator++();
         /// \brief Post-increments the number
-        const number<B> operator++(number<B>);
+        const number<B> operator++(int);
         /// \brief Adds given number to the number
         void add(const number<B> & numberToAdd);
         /// \brief Adds two given numbers and returns their sum
@@ -133,7 +133,7 @@ namespace cjr {
         /// \brief Pre-decrements the number
         void operator--();
         /// \brief Post-decrements the number
-        const number<B> operator--(number<B>);
+        const number<B> operator--(int);
         /// \brief Subtracts given number from the number
         void subtract(const number<B> & numberToSubtract);
         /// \brief Subtracts two given numbers and returns their difference
