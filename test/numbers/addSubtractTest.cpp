@@ -13,6 +13,7 @@ protected:
 };
 
 TEST_F(NumberAddSubtractTest, IncrementsNumber) {
+    // with method
     a.increment();
     ASSERT_EQ(a, cjr::number<>(11));
 
@@ -22,9 +23,21 @@ TEST_F(NumberAddSubtractTest, IncrementsNumber) {
     }
     EXPECT_EQ(b, cjr::number<>(123));
     EXPECT_EQ(c, cjr::number<>(90));
+
+    // with operator
+    f++;
+    ASSERT_EQ(f, cjr::number<>(11));
+
+    for(unsigned int i = 0; i < 100; i++) {
+        e++;
+        g++;
+    }
+    EXPECT_EQ(b, cjr::number<>(200));
+    EXPECT_EQ(g, cjr::number<>(75));
 }
 
 TEST_F(NumberAddSubtractTest, DecrementsNumber) {
+    // with method
     a.decrement();
     ASSERT_EQ(a, cjr::number<>(9));
 
@@ -34,6 +47,17 @@ TEST_F(NumberAddSubtractTest, DecrementsNumber) {
     }
     EXPECT_EQ(d, cjr::number<>(-123));
     EXPECT_EQ(f, cjr::number<>(-90));
+
+    // with operator
+    f--;
+    ASSERT_EQ(f, cjr::number<>(9));
+
+    for(unsigned int i = 0; i < 100; i++) {
+        e--;
+        g--;
+    }
+    EXPECT_EQ(b, cjr::number<>(0));
+    EXPECT_EQ(g, cjr::number<>(-125));
 }
 
 TEST_F(NumberAddSubtractTest, AddsNumbers) {

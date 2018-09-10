@@ -1,0 +1,449 @@
+\hypertarget{classcjr_1_1number}{\section{cjr\-:\-:number$<$ B $>$ Class Template Reference}
+\label{classcjr_1_1number}\index{cjr\-::number$<$ B $>$@{cjr\-::number$<$ B $>$}}
+}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class B = base\-Range\-::medium$>$class cjr\-::number$<$ B $>$}
+
+a class for storing numbers of any size 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em B} & defines maximal base of the number, see \hyperlink{classcjr_1_1base_range}{base\-Range} \\
+\hline
+\end{DoxyTemplParams}
+
+
+{\ttfamily \#include $<$number.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a96952d8729d8a96590b5cfa4de8c94f9}{\hyperlink{classcjr_1_1number_a96952d8729d8a96590b5cfa4de8c94f9}{number} ()}\label{classcjr_1_1number_a96952d8729d8a96590b5cfa4de8c94f9}
+
+\begin{DoxyCompactList}\small\item\em Constructs new number with 0 value and 10 as base. \end{DoxyCompactList}\item 
+\hyperlink{classcjr_1_1number_aeaf08725e9ae255c3ee25045bbd235f1}{number} (const B \&init\-Value, const B \&\hyperlink{classcjr_1_1number_abb42f009bce42f2050a7bd66e029b931}{base}=10)
+\begin{DoxyCompactList}\small\item\em Constructs new number with given value and base. \end{DoxyCompactList}\item 
+\hyperlink{classcjr_1_1number_aa3ab519d30cba11bfec2177c2b429b8f}{number} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&source\-Number)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \hyperlink{classcjr_1_1number}{number}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Utility}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcjr_1_1number_a14c7b4e829ee04a405f149db57c00195}{set\-Value} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&n)
+\begin{DoxyCompactList}\small\item\em sets new value of the number \end{DoxyCompactList}\item 
+void \hyperlink{classcjr_1_1number_a66c1ad13348c078cbf75d73def0aab9e}{set\-Value} (const B \&new\-Value)
+\begin{DoxyCompactList}\small\item\em sets new value of the number \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a456c3bd567b3603b9985d6baa73f8641}{const bool \hyperlink{classcjr_1_1number_a456c3bd567b3603b9985d6baa73f8641}{is\-Zero} () const }\label{classcjr_1_1number_a456c3bd567b3603b9985d6baa73f8641}
+
+\begin{DoxyCompactList}\small\item\em returns true when number's value is 0 \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a08274244f62ed97d98464046697cb800}{const bool \& \hyperlink{classcjr_1_1number_a08274244f62ed97d98464046697cb800}{is\-Negative} () const noexcept}\label{classcjr_1_1number_a08274244f62ed97d98464046697cb800}
+
+\begin{DoxyCompactList}\small\item\em returns true when number's value is less than 0 \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a153b7f8c8223b47846e2c64c7bdccfdb}{void \hyperlink{classcjr_1_1number_a153b7f8c8223b47846e2c64c7bdccfdb}{revert\-Sign} ()}\label{classcjr_1_1number_a153b7f8c8223b47846e2c64c7bdccfdb}
+
+\begin{DoxyCompactList}\small\item\em reverts the sign of the number \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a0a5c6272d8c076e1b1884530bcedee9b}{const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a0a5c6272d8c076e1b1884530bcedee9b}{absolute\-Value} () const }\label{classcjr_1_1number_a0a5c6272d8c076e1b1884530bcedee9b}
+
+\begin{DoxyCompactList}\small\item\em returns absolute value of the number \end{DoxyCompactList}\item 
+const std\-::string \hyperlink{classcjr_1_1number_a4eb89bde4b4866e761170d6c47dd46ab}{to\-String} (const bool \&with\-Separators=false) const 
+\begin{DoxyCompactList}\small\item\em returns value of the number converted to String \end{DoxyCompactList}\item 
+void \hyperlink{classcjr_1_1number_aab0fd6f29b9b3ab88fbead6aa7d4dba8}{print} (const bool \&with\-Separators=false) const 
+\begin{DoxyCompactList}\small\item\em prints to the console value of to\-String(bool) with new line at the end \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Calculation}\par
+{\em \begin{DoxyNote}{Note}
+Making calculations on numbers with different bases gives different\-Base\-Exception 
+
+When a std value is added to the \hyperlink{classcjr_1_1number}{number} it assumes, that the std value is represented in decimal system. Nevertheless you can add it to the \hyperlink{classcjr_1_1number}{number} of any base. 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a314f5ddd4ea8b6e0ff752d9ca8f00a2a}{void \hyperlink{classcjr_1_1number_a314f5ddd4ea8b6e0ff752d9ca8f00a2a}{increment} ()}\label{classcjr_1_1number_a314f5ddd4ea8b6e0ff752d9ca8f00a2a}
+
+\begin{DoxyCompactList}\small\item\em Increments the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_af50a7633da47b4003ae722138717ecce}{void \hyperlink{classcjr_1_1number_af50a7633da47b4003ae722138717ecce}{operator++} ()}\label{classcjr_1_1number_af50a7633da47b4003ae722138717ecce}
+
+\begin{DoxyCompactList}\small\item\em Pre-\/increments the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a418523b5c0dff677e0303998909056ba}{const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a418523b5c0dff677e0303998909056ba}{operator++} (\hyperlink{classcjr_1_1number}{number}$<$ B $>$)}\label{classcjr_1_1number_a418523b5c0dff677e0303998909056ba}
+
+\begin{DoxyCompactList}\small\item\em Post-\/increments the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_ac876a5bc8916d2ddb19a1d514ac3f5c0}{void \hyperlink{classcjr_1_1number_ac876a5bc8916d2ddb19a1d514ac3f5c0}{add} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Add)}\label{classcjr_1_1number_ac876a5bc8916d2ddb19a1d514ac3f5c0}
+
+\begin{DoxyCompactList}\small\item\em Adds given number to the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a3ead20a677d3bcd872895065fcfea6f7}{\hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a3ead20a677d3bcd872895065fcfea6f7}{operator+} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Add) const }\label{classcjr_1_1number_a3ead20a677d3bcd872895065fcfea6f7}
+
+\begin{DoxyCompactList}\small\item\em Adds two given numbers and returns their sum. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a4a3990a55896edfa85639c57d8c3c699}{void \hyperlink{classcjr_1_1number_a4a3990a55896edfa85639c57d8c3c699}{add} (const B \&value\-To\-Add)}\label{classcjr_1_1number_a4a3990a55896edfa85639c57d8c3c699}
+
+\begin{DoxyCompactList}\small\item\em Adds given std value to the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_af4753e77a4277f4290219e4e91763d8c}{\hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_af4753e77a4277f4290219e4e91763d8c}{operator+} (const B \&value\-To\-Add) const }\label{classcjr_1_1number_af4753e77a4277f4290219e4e91763d8c}
+
+\begin{DoxyCompactList}\small\item\em Adds given number and std value and returns their sum as a \hyperlink{classcjr_1_1number}{number}. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a26eef97a8cbcf837b65e7dda206e623d}{void \hyperlink{classcjr_1_1number_a26eef97a8cbcf837b65e7dda206e623d}{decrement} ()}\label{classcjr_1_1number_a26eef97a8cbcf837b65e7dda206e623d}
+
+\begin{DoxyCompactList}\small\item\em Decrements the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a2ffbd3e053d87dd7d53381df55111a79}{void \hyperlink{classcjr_1_1number_a2ffbd3e053d87dd7d53381df55111a79}{operator-\/-\/} ()}\label{classcjr_1_1number_a2ffbd3e053d87dd7d53381df55111a79}
+
+\begin{DoxyCompactList}\small\item\em Pre-\/decrements the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a2a460b5913da02ccf4331c7b9afd5fb8}{const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a2a460b5913da02ccf4331c7b9afd5fb8}{operator-\/-\/} (\hyperlink{classcjr_1_1number}{number}$<$ B $>$)}\label{classcjr_1_1number_a2a460b5913da02ccf4331c7b9afd5fb8}
+
+\begin{DoxyCompactList}\small\item\em Post-\/decrements the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_aa29378479836924b1110f40570198ada}{void \hyperlink{classcjr_1_1number_aa29378479836924b1110f40570198ada}{subtract} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Subtract)}\label{classcjr_1_1number_aa29378479836924b1110f40570198ada}
+
+\begin{DoxyCompactList}\small\item\em Subtracts given number from the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a9b54e89597d8db867a7d30bab2c8d10a}{\hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a9b54e89597d8db867a7d30bab2c8d10a}{operator-\/} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Subtract) const }\label{classcjr_1_1number_a9b54e89597d8db867a7d30bab2c8d10a}
+
+\begin{DoxyCompactList}\small\item\em Subtracts two given numbers and returns their difference. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_af95e527ca950399a3af5dbf12d01afc5}{void \hyperlink{classcjr_1_1number_af95e527ca950399a3af5dbf12d01afc5}{subtract} (const B \&value\-To\-Subtract)}\label{classcjr_1_1number_af95e527ca950399a3af5dbf12d01afc5}
+
+\begin{DoxyCompactList}\small\item\em Subtracts given std value from the number. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_ad48de2316e1e5c962c84eb4f4ad5cfc8}{\hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_ad48de2316e1e5c962c84eb4f4ad5cfc8}{operator-\/} (const B \&value\-To\-Subtract) const }\label{classcjr_1_1number_ad48de2316e1e5c962c84eb4f4ad5cfc8}
+
+\begin{DoxyCompactList}\small\item\em Subtracts std value from given number and returns their difference as a \hyperlink{classcjr_1_1number}{number}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Comparison}\par
+{\em \begin{DoxyNote}{Note}
+Comparing numbers with different bases gives different\-Base\-Exception 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a16ba1ce1e338fce48151a39ded8b7474}{const bool {\bfseries is\-Bigger} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a, const bool \&or\-Equal=false) const }\label{classcjr_1_1number_a16ba1ce1e338fce48151a39ded8b7474}
+
+\item 
+\hypertarget{classcjr_1_1number_a1f8bdacbaf1f13628d0d05c0bc2d216a}{const bool {\bfseries operator$>$} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a1f8bdacbaf1f13628d0d05c0bc2d216a}
+
+\item 
+\hypertarget{classcjr_1_1number_a409317d22923aec056b3278e844d1211}{const bool {\bfseries is\-Bigger\-Or\-Equal} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a409317d22923aec056b3278e844d1211}
+
+\item 
+\hypertarget{classcjr_1_1number_a920c71c3a23745c99b5f80cb789cd028}{const bool {\bfseries operator$>$=} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a920c71c3a23745c99b5f80cb789cd028}
+
+\item 
+\hypertarget{classcjr_1_1number_a5cf22a07813460edd061753af8089ca4}{const bool {\bfseries is\-Smaller} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a, const bool \&or\-Equal=false) const }\label{classcjr_1_1number_a5cf22a07813460edd061753af8089ca4}
+
+\item 
+\hypertarget{classcjr_1_1number_ab3595677812bf4fc5a19e3a7929a91da}{const bool {\bfseries operator$<$} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_ab3595677812bf4fc5a19e3a7929a91da}
+
+\item 
+\hypertarget{classcjr_1_1number_a5933f01885bea73d89cf31cc45e61d23}{const bool {\bfseries is\-Smaller\-Or\-Equal} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a5933f01885bea73d89cf31cc45e61d23}
+
+\item 
+\hypertarget{classcjr_1_1number_a7bd4110bfd0fa3b74d1c8f39bc85f2a0}{const bool {\bfseries operator$<$=} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a7bd4110bfd0fa3b74d1c8f39bc85f2a0}
+
+\item 
+\hypertarget{classcjr_1_1number_ae8f6c4c30da9add29b202ba0fdd280ba}{const bool {\bfseries is\-Equal} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&n) const }\label{classcjr_1_1number_ae8f6c4c30da9add29b202ba0fdd280ba}
+
+\item 
+\hypertarget{classcjr_1_1number_a3ee573ccdf8c28f9c6dafa15572c27c9}{const bool {\bfseries operator==} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_a3ee573ccdf8c28f9c6dafa15572c27c9}
+
+\item 
+\hypertarget{classcjr_1_1number_aae51bdc811ee8199d5283ab4bbac32b6}{const bool {\bfseries operator!=} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a) const }\label{classcjr_1_1number_aae51bdc811ee8199d5283ab4bbac32b6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a433504c68497185d691540b631888884}{const B \& {\bfseries get\-Base} () const noexcept}\label{classcjr_1_1number_a433504c68497185d691540b631888884}
+
+\item 
+\hypertarget{classcjr_1_1number_a82f2f33ee7549ea6ca2c530dced42b23}{const \hyperlink{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{digit\-List} \& {\bfseries get\-Digits} () const noexcept}\label{classcjr_1_1number_a82f2f33ee7549ea6ca2c530dced42b23}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \hyperlink{classcjr_1_1number_a4a519977252ef29149a4cb7834e93c1e}{have\-Same\-Bases} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a, const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Returns true when both numbers have the same base  When comparing to universal value(see \hyperlink{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}{Z\-E\-R\-O}, \hyperlink{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}{O\-N\-E}) also return true. \end{DoxyCompactList}\item 
+static void \hyperlink{classcjr_1_1number_a443f424f42b73c8f3bd5f04b45a7d412}{assert\-Have\-Same\-Bases} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&a, const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Throws different\-Base\-Exception when bases of given \hyperlink{classcjr_1_1number}{numbers} are different. \end{DoxyCompactList}\item 
+static const B \& \hyperlink{classcjr_1_1number_ac817352113440eee2ceddc383d0dcf2d}{assert\-Base\-Is\-Valid} (const B \&given\-Base)
+\begin{DoxyCompactList}\small\item\em Throws invalid\-Base\-Exception when given base doesn't meet base requirements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a67a279a44630ca637872f9280732aad6}{static const B \hyperlink{classcjr_1_1number_a67a279a44630ca637872f9280732aad6}{M\-A\-X\-\_\-\-B\-A\-S\-E} = std\-::sqrt(std\-::numeric\-\_\-limits$<$B$>$\-::max() -\/ 1)}\label{classcjr_1_1number_a67a279a44630ca637872f9280732aad6}
+
+\begin{DoxyCompactList}\small\item\em The maximal value of base for each range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{using \hyperlink{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{digit\-List} = std\-::list$<$ B $>$}\label{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}
+
+\begin{DoxyCompactList}\small\item\em List type for storing digits of \hyperlink{classcjr_1_1number}{number}. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{using \hyperlink{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{digit\-Iterator} = typename std\-::list$<$ B $>$\-::iterator}\label{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}
+
+\begin{DoxyCompactList}\small\item\em Iterator type for storing iterators for \hyperlink{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{digit\-List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcjr_1_1number_a58a4b2ff967a9637d426403d3a93ad07}{number} (const B \&init\-Value, const bool \&zero\-Base)
+\begin{DoxyCompactList}\small\item\em Constructs new number with given value and zero as base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Calculation Utils}\par
+{\em Internal methods for calculation algorithms }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a13f235e4c96edbddafe53b885840325b}{void {\bfseries add} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Add, const B \&base\-To\-Use)}\label{classcjr_1_1number_a13f235e4c96edbddafe53b885840325b}
+
+\item 
+\hypertarget{classcjr_1_1number_a14cef80c954c85ab84000475ecde09b9}{void {\bfseries add\-At} (\hyperlink{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{digit\-Iterator} i, const B \&base\-To\-Use, const B \&value\-To\-Add=1)}\label{classcjr_1_1number_a14cef80c954c85ab84000475ecde09b9}
+
+\item 
+\hypertarget{classcjr_1_1number_a2a662f36f05c14a39d16e576606cb5d0}{void {\bfseries subtract} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&number\-To\-Subtract, const B \&base\-To\-Use)}\label{classcjr_1_1number_a2a662f36f05c14a39d16e576606cb5d0}
+
+\item 
+\hypertarget{classcjr_1_1number_a6e7d57f93bbeca3854de659e91e2177f}{void {\bfseries subtract\-At} (\hyperlink{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{digit\-Iterator} i, const B \&base\-To\-Use, const B \&value\-To\-Subtract=1)}\label{classcjr_1_1number_a6e7d57f93bbeca3854de659e91e2177f}
+
+\item 
+\hypertarget{classcjr_1_1number_ad287607b202d339c2dd8ff31f23697ab}{void {\bfseries calculate\-Value\-And\-Proceed\-Offload} (\hyperlink{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{digit\-Iterator} \&i, const B \&new\-Value, const B \&base\-To\-Use)}\label{classcjr_1_1number_ad287607b202d339c2dd8ff31f23697ab}
+
+\item 
+\hypertarget{classcjr_1_1number_af366a07fcb161a13f2a09a2ecb7c1b9a}{void {\bfseries make\-Calculations} (void(\hyperlink{classcjr_1_1number}{number}$<$ B $>$\-::$\ast$calc\-Function)(\hyperlink{classcjr_1_1number_a137416a57d724f8b6a5c14bab7c6802b}{digit\-Iterator}, const B \&, const B \&), const \hyperlink{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{digit\-List} \&extra\-Digits, const B \&base\-To\-Use)}\label{classcjr_1_1number_af366a07fcb161a13f2a09a2ecb7c1b9a}
+
+\item 
+\hypertarget{classcjr_1_1number_ae04bab77e45873820a30f2432a3c4779}{const bool {\bfseries make\-Comparison} (const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \&n, bool bigger, const bool \&or\-Equal=false) const }\label{classcjr_1_1number_ae04bab77e45873820a30f2432a3c4779}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_abb42f009bce42f2050a7bd66e029b931}{const B \hyperlink{classcjr_1_1number_abb42f009bce42f2050a7bd66e029b931}{base}}\label{classcjr_1_1number_abb42f009bce42f2050a7bd66e029b931}
+
+\begin{DoxyCompactList}\small\item\em the base of stored number \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a3712887e1b8ecee31c396b78b6d62073}{bool \hyperlink{classcjr_1_1number_a3712887e1b8ecee31c396b78b6d62073}{negative}}\label{classcjr_1_1number_a3712887e1b8ecee31c396b78b6d62073}
+
+\begin{DoxyCompactList}\small\item\em true when number's value is negative \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a264ee3b2d320bdba897ba93b72a6b849}{\hyperlink{classcjr_1_1number_a64ca3e7862f3f4940065b93d38c1a465}{digit\-List} \hyperlink{classcjr_1_1number_a264ee3b2d320bdba897ba93b72a6b849}{digits}}\label{classcjr_1_1number_a264ee3b2d320bdba897ba93b72a6b849}
+
+\begin{DoxyCompactList}\small\item\em digits of stored number \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Universal Values}
+\label{_amgrpf308c32226026625205207ec76528501}%
+Values with the same representation with any base.
+
+When using them the library is not considering their base. When base is needed for calculations, it is being taken from second \hyperlink{classcjr_1_1number}{number} involved in it. Custom universal values can be created with dedicated \hyperlink{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}{method}. Since their base is stored as 0, they should be used only when explicitly needed. \begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]Undefined behaviour when making calculations only on these values. \end{DoxyRefDesc}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}{static const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}{O\-N\-E} = \hyperlink{classcjr_1_1number}{cjr\-::number}$<$B$>$\-::\hyperlink{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}{make\-Universal}(1)}\label{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}
+
+\begin{DoxyCompactList}\small\item\em Universal 1. \end{DoxyCompactList}\item 
+\hypertarget{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}{static const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}{Z\-E\-R\-O} = \hyperlink{classcjr_1_1number}{cjr\-::number}$<$B$>$\-::\hyperlink{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}{make\-Universal}(0)}\label{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}
+
+\begin{DoxyCompactList}\small\item\em Universal 0. \end{DoxyCompactList}\item 
+static const \hyperlink{classcjr_1_1number}{number}$<$ B $>$ \hyperlink{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}{make\-Universal} (const B \&init\-Value)
+\begin{DoxyCompactList}\small\item\em Creates universal value with given value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcjr_1_1number_a58a4b2ff967a9637d426403d3a93ad07}{\index{cjr\-::number@{cjr\-::number}!number@{number}}
+\index{number@{number}!cjr::number@{cjr\-::number}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ {\bf cjr\-::number}$<$ B $>$\-::{\bf number} (
+\begin{DoxyParamCaption}
+\item[{const B \&}]{init\-Value, }
+\item[{const bool \&}]{zero\-Base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classcjr_1_1number_a58a4b2ff967a9637d426403d3a93ad07}
+
+
+Constructs new number with given value and zero as base. 
+
+It was meant to create universal values (see \hyperlink{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}{O\-N\-E} and \hyperlink{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}{Z\-E\-R\-O}) which have the same representation despite of number's base \begin{DoxyWarning}{Warning}
+While implementation of this constructor omits checking base validity it shall not be used in the code 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em init\-Value} & the value which the new number will be initialized with, in decimal \\
+\hline
+{\em zero\-Basethis} & parameter is making possible for compiler to recognize this constructor \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_aeaf08725e9ae255c3ee25045bbd235f1}{\index{cjr\-::number@{cjr\-::number}!number@{number}}
+\index{number@{number}!cjr::number@{cjr\-::number}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ {\bf cjr\-::number}$<$ B $>$\-::{\bf number} (
+\begin{DoxyParamCaption}
+\item[{const B \&}]{init\-Value, }
+\item[{const B \&}]{base = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)}}\label{classcjr_1_1number_aeaf08725e9ae255c3ee25045bbd235f1}
+
+
+Constructs new number with given value and base. 
+
+Beside standard way, you can initialize new number just like a typical variable\-: 
+\begin{DoxyCode}
+\hyperlink{classcjr_1_1number}{cjr::number<>} n = 1 
+\end{DoxyCode}
+  which will create new number with 1 value and 10 as base 
+\begin{DoxyParams}{Parameters}
+{\em init\-Value} & the value which the new number will be initialized with, in decimal \\
+\hline
+{\em base} & base of the new number \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_aa3ab519d30cba11bfec2177c2b429b8f}{\index{cjr\-::number@{cjr\-::number}!number@{number}}
+\index{number@{number}!cjr::number@{cjr\-::number}}
+\subsubsection[{number}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ {\bf cjr\-::number}$<$ B $>$\-::{\bf number} (
+\begin{DoxyParamCaption}
+\item[{const {\bf number}$<$ B $>$ \&}]{source\-Number}
+\end{DoxyParamCaption}
+)}}\label{classcjr_1_1number_aa3ab519d30cba11bfec2177c2b429b8f}
+
+
+Copy constructor for \hyperlink{classcjr_1_1number}{number}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\-Number} & the number to copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcjr_1_1number_ac817352113440eee2ceddc383d0dcf2d}{\index{cjr\-::number@{cjr\-::number}!assert\-Base\-Is\-Valid@{assert\-Base\-Is\-Valid}}
+\index{assert\-Base\-Is\-Valid@{assert\-Base\-Is\-Valid}!cjr::number@{cjr\-::number}}
+\subsubsection[{assert\-Base\-Is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ const B \& {\bf cjr\-::number}$<$ B $>$\-::assert\-Base\-Is\-Valid (
+\begin{DoxyParamCaption}
+\item[{const B \&}]{given\-Base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classcjr_1_1number_ac817352113440eee2ceddc383d0dcf2d}
+
+
+Throws invalid\-Base\-Exception when given base doesn't meet base requirements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\-Base} & Base to test \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_a443f424f42b73c8f3bd5f04b45a7d412}{\index{cjr\-::number@{cjr\-::number}!assert\-Have\-Same\-Bases@{assert\-Have\-Same\-Bases}}
+\index{assert\-Have\-Same\-Bases@{assert\-Have\-Same\-Bases}!cjr::number@{cjr\-::number}}
+\subsubsection[{assert\-Have\-Same\-Bases}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B = base\-Range\-::medium$>$ static void {\bf cjr\-::number}$<$ B $>$\-::assert\-Have\-Same\-Bases (
+\begin{DoxyParamCaption}
+\item[{const {\bf number}$<$ B $>$ \&}]{a, }
+\item[{const {\bf number}$<$ B $>$ \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcjr_1_1number_a443f424f42b73c8f3bd5f04b45a7d412}
+
+
+Throws different\-Base\-Exception when bases of given \hyperlink{classcjr_1_1number}{numbers} are different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First \hyperlink{classcjr_1_1number}{number} to check \\
+\hline
+{\em b} & Second \hyperlink{classcjr_1_1number}{number} to check \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_a4a519977252ef29149a4cb7834e93c1e}{\index{cjr\-::number@{cjr\-::number}!have\-Same\-Bases@{have\-Same\-Bases}}
+\index{have\-Same\-Bases@{have\-Same\-Bases}!cjr::number@{cjr\-::number}}
+\subsubsection[{have\-Same\-Bases}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B = base\-Range\-::medium$>$ static const bool {\bf cjr\-::number}$<$ B $>$\-::have\-Same\-Bases (
+\begin{DoxyParamCaption}
+\item[{const {\bf number}$<$ B $>$ \&}]{a, }
+\item[{const {\bf number}$<$ B $>$ \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcjr_1_1number_a4a519977252ef29149a4cb7834e93c1e}
+
+
+Returns true when both numbers have the same base  When comparing to universal value(see \hyperlink{classcjr_1_1number_a0a6d68bdc0fda6943a5d8e0d47fdeb03}{Z\-E\-R\-O}, \hyperlink{classcjr_1_1number_a6327e5cfd5458aff794403400dfe0c13}{O\-N\-E}) also return true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First \hyperlink{classcjr_1_1number}{number} to check \\
+\hline
+{\em b} & Second \hyperlink{classcjr_1_1number}{number} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}{\index{cjr\-::number@{cjr\-::number}!make\-Universal@{make\-Universal}}
+\index{make\-Universal@{make\-Universal}!cjr::number@{cjr\-::number}}
+\subsubsection[{make\-Universal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ const {\bf number}$<$ B $>$ {\bf cjr\-::number}$<$ B $>$\-::make\-Universal (
+\begin{DoxyParamCaption}
+\item[{const B \&}]{init\-Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classcjr_1_1number_a5f7755ea44ed24ff4a28c96ef5bb3a80}
+
+
+Creates universal value with given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\-Value} & value to initialize universal with \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_aab0fd6f29b9b3ab88fbead6aa7d4dba8}{\index{cjr\-::number@{cjr\-::number}!print@{print}}
+\index{print@{print}!cjr::number@{cjr\-::number}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ void {\bf cjr\-::number}$<$ B $>$\-::print (
+\begin{DoxyParamCaption}
+\item[{const bool \&}]{with\-Separators = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classcjr_1_1number_aab0fd6f29b9b3ab88fbead6aa7d4dba8}
+
+
+prints to the console value of to\-String(bool) with new line at the end 
+
+
+\begin{DoxyParams}{Parameters}
+{\em with\-Separators} & when true each digit will be separated with '`' \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_a14c7b4e829ee04a405f149db57c00195}{\index{cjr\-::number@{cjr\-::number}!set\-Value@{set\-Value}}
+\index{set\-Value@{set\-Value}!cjr::number@{cjr\-::number}}
+\subsubsection[{set\-Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ void {\bf cjr\-::number}$<$ B $>$\-::set\-Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf number}$<$ B $>$ \&}]{n}
+\end{DoxyParamCaption}
+)}}\label{classcjr_1_1number_a14c7b4e829ee04a405f149db57c00195}
+
+
+sets new value of the number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number with source value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_a66c1ad13348c078cbf75d73def0aab9e}{\index{cjr\-::number@{cjr\-::number}!set\-Value@{set\-Value}}
+\index{set\-Value@{set\-Value}!cjr::number@{cjr\-::number}}
+\subsubsection[{set\-Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ void {\bf cjr\-::number}$<$ B $>$\-::set\-Value (
+\begin{DoxyParamCaption}
+\item[{const B \&}]{new\-Value}
+\end{DoxyParamCaption}
+)}}\label{classcjr_1_1number_a66c1ad13348c078cbf75d73def0aab9e}
+
+
+sets new value of the number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & source value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcjr_1_1number_a4eb89bde4b4866e761170d6c47dd46ab}{\index{cjr\-::number@{cjr\-::number}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!cjr::number@{cjr\-::number}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class B $>$ const std\-::string {\bf cjr\-::number}$<$ B $>$\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{const bool \&}]{with\-Separators = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classcjr_1_1number_a4eb89bde4b4866e761170d6c47dd46ab}
+
+
+returns value of the number converted to String 
+
+
+\begin{DoxyParams}{Parameters}
+{\em with\-Separators} & when true each digit will be separated with '`' \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/numbers/number.\-hpp\item 
+src/numbers/implementation/number.\-cpp\item 
+src/numbers/implementation/number\-Add\-Subtract.\-cpp\item 
+src/numbers/implementation/number\-Comparison.\-cpp\item 
+src/numbers/implementation/number\-Utils.\-cpp\end{DoxyCompactItemize}

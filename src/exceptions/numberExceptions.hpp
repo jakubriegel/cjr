@@ -1,16 +1,20 @@
-#ifndef CJR_LIB_NUMBEREXCEPTIONS_HPP
-#define CJR_LIB_NUMBEREXCEPTIONS_HPP
+#pragma once
 
 #include "cjr.hpp"
 #include "exceptions/exception.hpp"
 #include "numbers/utils.hpp"
 #include "numbers/number.hpp"
 
+/// \file numberExceptions.hpp
+/// \brief Contains custom exceptions for \ref number
+
 namespace cjr {
     namespace exception {
+
+        /// \brief Exception to be thrown when given base is invalid
+        /// \details Base is invalid when it is less or equal to zero or it exceed base maximum.
         class invalidBaseException : public exception {
         public:
-
             template <class B>
             invalidBaseException(const B & givenBase, const B & maxBase)
                 : exception(
@@ -19,6 +23,7 @@ namespace cjr {
                         ) {}
         };
 
+        /// \brief Exception to be thrown when two numbers have different bases
         class differentBaseException : public exception {
         public:
             differentBaseException() : exception("cjr::numbers have different bases") {}
@@ -26,5 +31,3 @@ namespace cjr {
     }
 }
 
-
-#endif //CJR_LIB_NUMBEREXCEPTIONS_HPP

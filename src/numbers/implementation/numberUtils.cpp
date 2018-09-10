@@ -6,9 +6,9 @@
 namespace cjr {
 
     template<class B>
-    void number<B>::setValue(const number<B> & a) {
-        this->digits = digitList(a.getDigits());
-        this->negative = a.isNegative();
+    void number<B>::setValue(const number<B> & n) {
+        this->digits = digitList(n.getDigits());
+        this->negative = n.isNegative();
     }
 
     template<class B>
@@ -33,8 +33,8 @@ namespace cjr {
     }
 
     template<class B>
-    const number<B> number<B>::makeOne() {
-        return number<B>(1, true);
+    const number <B> number<B>::makeUniversal(const B & initValue) {
+        return number<B>(initValue, true);
     }
 
     template <class B>

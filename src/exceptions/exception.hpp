@@ -1,13 +1,15 @@
-#ifndef CJR_LIB_EXCEPTION_HPP
-#define CJR_LIB_EXCEPTION_HPP
+#pragma once
 
 #include <exception>
 #include <cstring>
 
 namespace cjr {
     namespace exception {
+
+        /// \brief Universal exception for cjr
         class exception : public std::exception {
         protected:
+            /// \brief Message to be displayed with error
             char * message;
 
         public:
@@ -29,5 +31,3 @@ namespace cjr {
         };
     }
 }
-
-#endif //CJR_LIB_EXCEPTION_HPP

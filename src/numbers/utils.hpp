@@ -1,33 +1,33 @@
-#ifndef CJR_LIB_UTILS_HPP
-#define CJR_LIB_UTILS_HPP
+#pragma once
 
 namespace cjr {
-    class baseRange {
-    public:
-        using binary = bool;
-        using small = short int;
-        using medium = int;
-        using big = long int;
-        using huge = long long int;
+        /// \brief a class defining ranges of bases for \ref number
+        /// \details It is used as a template parameter for \ref number. The maximal values of bases are calculated inside \ref number.
+        class baseRange final {
+        public:
+            /// \warning NOT YET IMPLEMENTED
+            /// \details baseRange for storing binary numbers
+            using binary = bool;
+            using small = short int;
+            using medium = int;
+            using big = long int;
+            using huge = long long int;
 
-        template<class B>
-        const static std::string getRangeName(const B & givenBase, const bool & extended = false) {
+            virtual ~baseRange() = 0;
 
-            const auto type = typeid(givenBase).name();
-            std::string response = extended ? "cjr::number::baseRange::" : "";
+            template<class B>
+            const static std::string getRangeName(const B & givenBase, const bool & extended = false) {
 
-            if(type == typeid(binary(1)).name()) response += "binary";
-            if(type == typeid(small(1)).name()) response += "small";
-            if(type == typeid(medium(1)).name()) response += "medium";
-            if(type == typeid(big(1)).name()) response += "big";
-            if(type == typeid(huge(1)).name()) response += "huge";
+                const auto type = typeid(givenBase).name();
+                std::string response = extended ? "cjr::number::baseRange::" : "";
 
-            return response;
-        }
-    };
+                if(type == typeid(binary(1)).name()) response += "binary";
+                if(type == typeid(small(1)).name()) response += "small";
+                if(type == typeid(medium(1)).name()) response += "medium";
+                if(type == typeid(big(1)).name()) response += "big";
+                if(type == typeid(huge(1)).name()) response += "huge";
 
-
-
+                return response;
+            }
+        };
 }
-
-#endif //CJR_LIB_UTILS_HPP

@@ -57,9 +57,30 @@ namespace cjr {
        this->add(number<B>::ONE);
     }
 
+    template<class B>
+    void number<B>::operator++() {
+        this->increment();
+    }
+
+    template<class B>
+    const number<B> number<B>::operator++(number<B>) {
+        const auto thisBeforeIncrementation = number<B>(*this);
+        this->increment();
+
+        return thisBeforeIncrementation;
+    }
+
     template <class B>
     void number<B>::add(const number<B> & numberToAdd) {
         this->add(numberToAdd, this->base);
+    }
+
+    template<class B>
+    number<B> number<B>::operator+(const number<B> & numberToAdd) const {
+        auto result = number<B>(*this);
+        result.add(numberToAdd);
+
+        return result;
     }
 
     template<class B>
@@ -84,14 +105,43 @@ namespace cjr {
         else this->add(number<B>(valueToAdd, this->base));
     }
 
+    template<class B>
+    number<B> number<B>::operator+(const B & valueToAdd) const {
+        auto result = number<B>(*this);
+        result.add(valueToAdd);
+
+        return result;
+    }
+
     template <class B>
     void number<B>::decrement() {
         this->subtract(number<B>::ONE);
     }
 
+    template<class B>
+    void number<B>::operator--() {
+        this->decrement();
+    }
+
+    template<class B>
+    const number<B> number<B>::operator--(number<B>) {
+        const auto thisBeforeDecrementation = number<B>(*this);
+        this->decrement();
+
+        return thisBeforeDecrementation;
+    }
+
     template <class B>
     void number<B>::subtract(const number<B> & numberToSubtract) {
         subtract(numberToSubtract, this->base);
+    }
+
+    template<class B>
+    number<B> number<B>::operator-(const number<B> & numberToSubtract) const {
+        auto result = number<B>(*this);
+        result.subtract(numberToSubtract);
+
+        return result;
     }
 
     template<class B>
@@ -127,6 +177,14 @@ namespace cjr {
     template <class B>
     void number<B>::subtract(const B & valueToSubtract) {
         this->subtract(number<B>(valueToSubtract, this->base));
+    }
+
+    template<class B>
+    number<B> number<B>::operator-(const B & valueToSubtract) const {
+        auto result = number<B>(*this);
+        result.subtract(valueToSubtract);
+
+        return result;
     }
 }
 

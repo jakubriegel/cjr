@@ -1,5 +1,7 @@
-#ifndef CJR_LIB_CJR_HPP
-#define CJR_LIB_CJR_HPP
+#pragma once
+
+/// \file cjr.hpp
+/// \brief Includes all of std headers and external libraries needed by the project
 
 #include <iostream>
 #include <ostream>
@@ -10,5 +12,3 @@
 #include <cmath>
 #include <limits>
 #include <typeinfo>
-
-#endif //CJR_LIB_CJR_HPP

@@ -8,7 +8,10 @@ namespace cjr {
     // definitions of static members
 
     template <class B>
-    const cjr::number<B> number<B>::ONE = cjr::number<B>::makeOne();
+    const cjr::number<B> number<B>::ONE = cjr::number<B>::makeUniversal(1);
+
+    template <class B>
+    const cjr::number<B> number<B>::ZERO = cjr::number<B>::makeUniversal(0);
 
     template <class B>
     const B number<B>::MAX_BASE = std::sqrt(std::numeric_limits<B>::max() - 1);
