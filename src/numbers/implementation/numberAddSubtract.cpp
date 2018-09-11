@@ -1,6 +1,4 @@
-
 #include <numbers/number.hpp>
-
 #include "numbers/number.hpp"
 
 namespace cjr {
@@ -14,7 +12,7 @@ namespace cjr {
 
         // add value to the number and process offload
         const B newValue = *i + valueToAdd;
-        this->calculateValueAndProceedOffload(i, newValue, baseToUse);
+        this->calculateValueAndProcessOffload(i, newValue, baseToUse);
     }
 
     template <class B>
@@ -27,14 +25,13 @@ namespace cjr {
         }
 
         const B newValue = *i - valueToSubtract;
-        this->calculateValueAndProceedOffload(i, newValue, baseToUse);
+        this->calculateValueAndProcessOffload(i, newValue, baseToUse);
 
         while(*std::prev(this->digits.end()) == 0 && this->digits.size() > 1) this->digits.pop_back();
     }
 
     template <class B>
-    void number<B>::calculateValueAndProceedOffload(digitIterator & i, const B & newValue, const B & baseToUse) {
-//        baseToUse = (baseToUse == -1) ? this->base : baseToUse;
+    void number<B>::calculateValueAndProcessOffload(digitIterator & i, const B & newValue, const B & baseToUse) {
         if(newValue >= baseToUse) {
             *i = newValue % baseToUse;
             const B offload = (newValue - *i) / baseToUse;

@@ -1,6 +1,6 @@
 add_executable(
         unit_tests
-        numbers/comparisonTest.cpp numbers/addSubtractTest.cpp numbers/generalTest.cpp numbers/utilsTest.cpp)
+        numbers/comparisonTest.cpp numbers/addSubtractTest.cpp numbers/generalTest.cpp numbers/utilsTest.cpp numbers/multiplyDivideTest.cpp)
 
 target_link_libraries(
         unit_tests

@@ -1,10 +1,7 @@
-
 #include <numbers/number.hpp>
 
-#include "numbers/number.hpp"
-
 namespace cjr {
-
+    
     // definitions of static members
 
     template <class B>

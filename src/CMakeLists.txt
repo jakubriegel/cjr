@@ -3,7 +3,7 @@ add_library(
         ${CMAKE_CURRENT_LIST_DIR}/exceptions/exception.hpp
         ${CMAKE_CURRENT_LIST_DIR}/exceptions/numberExceptions.hpp
         ${CMAKE_CURRENT_LIST_DIR}/cjr.hpp
-        ${CMAKE_CURRENT_LIST_DIR}/numbers/utils.hpp numbers/implementation/numberComparison.cpp numbers/implementation/numberAddSubtract.cpp numbers/implementation/numberUtils.cpp)
+        ${CMAKE_CURRENT_LIST_DIR}/numbers/utils.hpp numbers/implementation/numberComparison.cpp numbers/implementation/numberAddSubtract.cpp numbers/implementation/numberUtils.cpp numbers/implementation/numberMultiplyDivide.cpp)
 
 target_sources(
         cjr

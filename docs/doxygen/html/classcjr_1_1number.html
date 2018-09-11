@@ -88,12 +88,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcjr_1_1number-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cjr::number&lt; B &gt; Class Template Reference</div>  </div>
@@ -113,13 +111,24 @@ class cjr::number&lt; B &gt;</h3>
 </div>
 <p><code>#include &lt;<a class="el" href="number_8hpp_source.html">number.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a64ca3e7862f3f4940065b93d38c1a465"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64ca3e7862f3f4940065b93d38c1a465"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a> = std::list&lt; B &gt;</td></tr>
+<tr class="memdesc:a64ca3e7862f3f4940065b93d38c1a465"><td class="mdescLeft">&#160;</td><td class="mdescRight">List type for storing digits of <a class="el" href="classcjr_1_1number.html">number</a>. <br/></td></tr>
+<tr class="separator:a64ca3e7862f3f4940065b93d38c1a465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137416a57d724f8b6a5c14bab7c6802b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a137416a57d724f8b6a5c14bab7c6802b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a> = typename std::list&lt; B &gt;::iterator</td></tr>
+<tr class="memdesc:a137416a57d724f8b6a5c14bab7c6802b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator type for storing iterators for <a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a>. <br/></td></tr>
+<tr class="separator:a137416a57d724f8b6a5c14bab7c6802b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a96952d8729d8a96590b5cfa4de8c94f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96952d8729d8a96590b5cfa4de8c94f9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a96952d8729d8a96590b5cfa4de8c94f9">number</a> ()</td></tr>
 <tr class="memdesc:a96952d8729d8a96590b5cfa4de8c94f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs new number with 0 value and 10 as base. <br/></td></tr>
 <tr class="separator:a96952d8729d8a96590b5cfa4de8c94f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaf08725e9ae255c3ee25045bbd235f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aeaf08725e9ae255c3ee25045bbd235f1">number</a> (const B &amp;initValue, const B &amp;<a class="el" href="classcjr_1_1number.html#abb42f009bce42f2050a7bd66e029b931">base</a>=10)</td></tr>
+<tr class="memitem:aeaf08725e9ae255c3ee25045bbd235f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aeaf08725e9ae255c3ee25045bbd235f1">number</a> (const B &amp;initValue, const B &amp;base=10)</td></tr>
 <tr class="memdesc:aeaf08725e9ae255c3ee25045bbd235f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs new number with given value and base.  <a href="#aeaf08725e9ae255c3ee25045bbd235f1">More...</a><br/></td></tr>
 <tr class="separator:aeaf08725e9ae255c3ee25045bbd235f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ab519d30cba11bfec2177c2b429b8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aa3ab519d30cba11bfec2177c2b429b8f">number</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;sourceNumber)</td></tr>
@@ -167,21 +176,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#af50a7633da47b4003ae722138717ecce">operator++</a> ()</td></tr>
 <tr class="memdesc:af50a7633da47b4003ae722138717ecce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-increments the number. <br/></td></tr>
 <tr class="separator:af50a7633da47b4003ae722138717ecce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a418523b5c0dff677e0303998909056ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a418523b5c0dff677e0303998909056ba"></a>
-const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a418523b5c0dff677e0303998909056ba">operator++</a> (<a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;)</td></tr>
-<tr class="memdesc:a418523b5c0dff677e0303998909056ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increments the number. <br/></td></tr>
-<tr class="separator:a418523b5c0dff677e0303998909056ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac876a5bc8916d2ddb19a1d514ac3f5c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac876a5bc8916d2ddb19a1d514ac3f5c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#ac876a5bc8916d2ddb19a1d514ac3f5c0">add</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToAdd)</td></tr>
-<tr class="memdesc:ac876a5bc8916d2ddb19a1d514ac3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds given number to the number. <br/></td></tr>
+<tr class="memitem:a6b6ef41013a16ea2a0cfebd5b9d99172"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b6ef41013a16ea2a0cfebd5b9d99172"></a>
+const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a6b6ef41013a16ea2a0cfebd5b9d99172">operator++</a> (int)</td></tr>
+<tr class="memdesc:a6b6ef41013a16ea2a0cfebd5b9d99172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increments the number. <br/></td></tr>
+<tr class="separator:a6b6ef41013a16ea2a0cfebd5b9d99172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac876a5bc8916d2ddb19a1d514ac3f5c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#ac876a5bc8916d2ddb19a1d514ac3f5c0">add</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToAdd)</td></tr>
+<tr class="memdesc:ac876a5bc8916d2ddb19a1d514ac3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds given number to the number.  <a href="#ac876a5bc8916d2ddb19a1d514ac3f5c0">More...</a><br/></td></tr>
 <tr class="separator:ac876a5bc8916d2ddb19a1d514ac3f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ead20a677d3bcd872895065fcfea6f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ead20a677d3bcd872895065fcfea6f7"></a>
 <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a3ead20a677d3bcd872895065fcfea6f7">operator+</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToAdd) const </td></tr>
 <tr class="memdesc:a3ead20a677d3bcd872895065fcfea6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two given numbers and returns their sum. <br/></td></tr>
 <tr class="separator:a3ead20a677d3bcd872895065fcfea6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3990a55896edfa85639c57d8c3c699"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a3990a55896edfa85639c57d8c3c699"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a4a3990a55896edfa85639c57d8c3c699">add</a> (const B &amp;valueToAdd)</td></tr>
-<tr class="memdesc:a4a3990a55896edfa85639c57d8c3c699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds given std value to the number. <br/></td></tr>
+<tr class="memitem:a4a3990a55896edfa85639c57d8c3c699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a4a3990a55896edfa85639c57d8c3c699">add</a> (const B &amp;valueToAdd)</td></tr>
+<tr class="memdesc:a4a3990a55896edfa85639c57d8c3c699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds given std value to the number.  <a href="#a4a3990a55896edfa85639c57d8c3c699">More...</a><br/></td></tr>
 <tr class="separator:a4a3990a55896edfa85639c57d8c3c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4753e77a4277f4290219e4e91763d8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4753e77a4277f4290219e4e91763d8c"></a>
 <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#af4753e77a4277f4290219e4e91763d8c">operator+</a> (const B &amp;valueToAdd) const </td></tr>
@@ -195,26 +202,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a2ffbd3e053d87dd7d53381df55111a79">operator--</a> ()</td></tr>
 <tr class="memdesc:a2ffbd3e053d87dd7d53381df55111a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-decrements the number. <br/></td></tr>
 <tr class="separator:a2ffbd3e053d87dd7d53381df55111a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a460b5913da02ccf4331c7b9afd5fb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a460b5913da02ccf4331c7b9afd5fb8"></a>
-const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a2a460b5913da02ccf4331c7b9afd5fb8">operator--</a> (<a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;)</td></tr>
-<tr class="memdesc:a2a460b5913da02ccf4331c7b9afd5fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrements the number. <br/></td></tr>
-<tr class="separator:a2a460b5913da02ccf4331c7b9afd5fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa29378479836924b1110f40570198ada"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa29378479836924b1110f40570198ada"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aa29378479836924b1110f40570198ada">subtract</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToSubtract)</td></tr>
-<tr class="memdesc:aa29378479836924b1110f40570198ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts given number from the number. <br/></td></tr>
+<tr class="memitem:a53449243aa05abff7e091030de0e3028"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53449243aa05abff7e091030de0e3028"></a>
+const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a53449243aa05abff7e091030de0e3028">operator--</a> (int)</td></tr>
+<tr class="memdesc:a53449243aa05abff7e091030de0e3028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrements the number. <br/></td></tr>
+<tr class="separator:a53449243aa05abff7e091030de0e3028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29378479836924b1110f40570198ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aa29378479836924b1110f40570198ada">subtract</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToSubtract)</td></tr>
+<tr class="memdesc:aa29378479836924b1110f40570198ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts given number from the number.  <a href="#aa29378479836924b1110f40570198ada">More...</a><br/></td></tr>
 <tr class="separator:aa29378479836924b1110f40570198ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b54e89597d8db867a7d30bab2c8d10a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b54e89597d8db867a7d30bab2c8d10a"></a>
 <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a9b54e89597d8db867a7d30bab2c8d10a">operator-</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToSubtract) const </td></tr>
 <tr class="memdesc:a9b54e89597d8db867a7d30bab2c8d10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two given numbers and returns their difference. <br/></td></tr>
 <tr class="separator:a9b54e89597d8db867a7d30bab2c8d10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af95e527ca950399a3af5dbf12d01afc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95e527ca950399a3af5dbf12d01afc5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#af95e527ca950399a3af5dbf12d01afc5">subtract</a> (const B &amp;valueToSubtract)</td></tr>
-<tr class="memdesc:af95e527ca950399a3af5dbf12d01afc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts given std value from the number. <br/></td></tr>
+<tr class="memitem:af95e527ca950399a3af5dbf12d01afc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#af95e527ca950399a3af5dbf12d01afc5">subtract</a> (const B &amp;valueToSubtract)</td></tr>
+<tr class="memdesc:af95e527ca950399a3af5dbf12d01afc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts given std value from the number.  <a href="#af95e527ca950399a3af5dbf12d01afc5">More...</a><br/></td></tr>
 <tr class="separator:af95e527ca950399a3af5dbf12d01afc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48de2316e1e5c962c84eb4f4ad5cfc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad48de2316e1e5c962c84eb4f4ad5cfc8"></a>
 <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#ad48de2316e1e5c962c84eb4f4ad5cfc8">operator-</a> (const B &amp;valueToSubtract) const </td></tr>
 <tr class="memdesc:ad48de2316e1e5c962c84eb4f4ad5cfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts std value from given number and returns their difference as a <a class="el" href="classcjr_1_1number.html">number</a>. <br/></td></tr>
 <tr class="separator:ad48de2316e1e5c962c84eb4f4ad5cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfb2e6eb2297527aa34f21c84c92c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a9bfb2e6eb2297527aa34f21c84c92c1c">multiply</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToMultiply)</td></tr>
+<tr class="memdesc:a9bfb2e6eb2297527aa34f21c84c92c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the number by given <a class="el" href="classcjr_1_1number.html">number</a>.  <a href="#a9bfb2e6eb2297527aa34f21c84c92c1c">More...</a><br/></td></tr>
+<tr class="separator:a9bfb2e6eb2297527aa34f21c84c92c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8265613523915af2d0216560f144e84a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8265613523915af2d0216560f144e84a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a8265613523915af2d0216560f144e84a">operator*</a> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToMultiply)</td></tr>
+<tr class="memdesc:a8265613523915af2d0216560f144e84a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the number by given <a class="el" href="classcjr_1_1number.html">number</a>. <br/></td></tr>
+<tr class="separator:a8265613523915af2d0216560f144e84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea945b8aecaad22c99b954bea3af1179"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#aea945b8aecaad22c99b954bea3af1179">multiply</a> (const B &amp;valueToMultiply)</td></tr>
+<tr class="memdesc:aea945b8aecaad22c99b954bea3af1179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the number by given std value.  <a href="#aea945b8aecaad22c99b954bea3af1179">More...</a><br/></td></tr>
+<tr class="separator:aea945b8aecaad22c99b954bea3af1179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af665bf47c1d23104effdda477a173ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af665bf47c1d23104effdda477a173ba2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#af665bf47c1d23104effdda477a173ba2">operator*</a> (const B &amp;valueToMultiply)</td></tr>
+<tr class="memdesc:af665bf47c1d23104effdda477a173ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the number by given std value. <br/></td></tr>
+<tr class="separator:af665bf47c1d23104effdda477a173ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace65049054fa8b2a7498a3f2af7b7298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#ace65049054fa8b2a7498a3f2af7b7298">power</a> (unsigned int power=2)</td></tr>
+<tr class="memdesc:ace65049054fa8b2a7498a3f2af7b7298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises the number to the given power.  <a href="#ace65049054fa8b2a7498a3f2af7b7298">More...</a><br/></td></tr>
+<tr class="separator:ace65049054fa8b2a7498a3f2af7b7298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2aeb5b369b048c53e2a0c209a5476e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a5f2aeb5b369b048c53e2a0c209a5476e">timesBase</a> (unsigned int <a class="el" href="classcjr_1_1number.html#ace65049054fa8b2a7498a3f2af7b7298">power</a>=1)</td></tr>
+<tr class="memdesc:a5f2aeb5b369b048c53e2a0c209a5476e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the number by given power of its base.  <a href="#a5f2aeb5b369b048c53e2a0c209a5476e">More...</a><br/></td></tr>
+<tr class="separator:a5f2aeb5b369b048c53e2a0c209a5476e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Comparison</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><dl class="section note"><dt>Note</dt><dd>Comparing numbers with different bases gives differentBaseException </dd></dl>
 </div></td></tr>
@@ -278,62 +303,6 @@ static const B&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memdesc:a67a279a44630ca637872f9280732aad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximal value of base for each range. <br/></td></tr>
 <tr class="separator:a67a279a44630ca637872f9280732aad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
-Private Types</h2></td></tr>
-<tr class="memitem:a64ca3e7862f3f4940065b93d38c1a465"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64ca3e7862f3f4940065b93d38c1a465"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a> = std::list&lt; B &gt;</td></tr>
-<tr class="memdesc:a64ca3e7862f3f4940065b93d38c1a465"><td class="mdescLeft">&#160;</td><td class="mdescRight">List type for storing digits of <a class="el" href="classcjr_1_1number.html">number</a>. <br/></td></tr>
-<tr class="separator:a64ca3e7862f3f4940065b93d38c1a465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a137416a57d724f8b6a5c14bab7c6802b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a137416a57d724f8b6a5c14bab7c6802b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a> = typename std::list&lt; B &gt;::iterator</td></tr>
-<tr class="memdesc:a137416a57d724f8b6a5c14bab7c6802b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator type for storing iterators for <a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a>. <br/></td></tr>
-<tr class="separator:a137416a57d724f8b6a5c14bab7c6802b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a58a4b2ff967a9637d426403d3a93ad07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a58a4b2ff967a9637d426403d3a93ad07">number</a> (const B &amp;initValue, const bool &amp;zeroBase)</td></tr>
-<tr class="memdesc:a58a4b2ff967a9637d426403d3a93ad07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs new number with given value and zero as base.  <a href="#a58a4b2ff967a9637d426403d3a93ad07">More...</a><br/></td></tr>
-<tr class="separator:a58a4b2ff967a9637d426403d3a93ad07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Calculation Utils</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Internal methods for calculation algorithms </p>
-</div></td></tr>
-<tr class="memitem:a13f235e4c96edbddafe53b885840325b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13f235e4c96edbddafe53b885840325b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToAdd, const B &amp;baseToUse)</td></tr>
-<tr class="separator:a13f235e4c96edbddafe53b885840325b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14cef80c954c85ab84000475ecde09b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14cef80c954c85ab84000475ecde09b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addAt</b> (<a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a> i, const B &amp;baseToUse, const B &amp;valueToAdd=1)</td></tr>
-<tr class="separator:a14cef80c954c85ab84000475ecde09b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a662f36f05c14a39d16e576606cb5d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a662f36f05c14a39d16e576606cb5d0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>subtract</b> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;numberToSubtract, const B &amp;baseToUse)</td></tr>
-<tr class="separator:a2a662f36f05c14a39d16e576606cb5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e7d57f93bbeca3854de659e91e2177f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e7d57f93bbeca3854de659e91e2177f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>subtractAt</b> (<a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a> i, const B &amp;baseToUse, const B &amp;valueToSubtract=1)</td></tr>
-<tr class="separator:a6e7d57f93bbeca3854de659e91e2177f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad287607b202d339c2dd8ff31f23697ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad287607b202d339c2dd8ff31f23697ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calculateValueAndProceedOffload</b> (<a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a> &amp;i, const B &amp;newValue, const B &amp;baseToUse)</td></tr>
-<tr class="separator:ad287607b202d339c2dd8ff31f23697ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af366a07fcb161a13f2a09a2ecb7c1b9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af366a07fcb161a13f2a09a2ecb7c1b9a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>makeCalculations</b> (void(<a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;::*calcFunction)(<a class="el" href="classcjr_1_1number.html#a137416a57d724f8b6a5c14bab7c6802b">digitIterator</a>, const B &amp;, const B &amp;), const <a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a> &amp;extraDigits, const B &amp;baseToUse)</td></tr>
-<tr class="separator:af366a07fcb161a13f2a09a2ecb7c1b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae04bab77e45873820a30f2432a3c4779"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae04bab77e45873820a30f2432a3c4779"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>makeComparison</b> (const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;n, bool bigger, const bool &amp;orEqual=false) const </td></tr>
-<tr class="separator:ae04bab77e45873820a30f2432a3c4779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:abb42f009bce42f2050a7bd66e029b931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb42f009bce42f2050a7bd66e029b931"></a>
-const B&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#abb42f009bce42f2050a7bd66e029b931">base</a></td></tr>
-<tr class="memdesc:abb42f009bce42f2050a7bd66e029b931"><td class="mdescLeft">&#160;</td><td class="mdescRight">the base of stored number <br/></td></tr>
-<tr class="separator:abb42f009bce42f2050a7bd66e029b931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3712887e1b8ecee31c396b78b6d62073"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3712887e1b8ecee31c396b78b6d62073"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a3712887e1b8ecee31c396b78b6d62073">negative</a></td></tr>
-<tr class="memdesc:a3712887e1b8ecee31c396b78b6d62073"><td class="mdescLeft">&#160;</td><td class="mdescRight">true when number's value is negative <br/></td></tr>
-<tr class="separator:a3712887e1b8ecee31c396b78b6d62073"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a264ee3b2d320bdba897ba93b72a6b849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a264ee3b2d320bdba897ba93b72a6b849"></a>
-<a class="el" href="classcjr_1_1number.html#a64ca3e7862f3f4940065b93d38c1a465">digitList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcjr_1_1number.html#a264ee3b2d320bdba897ba93b72a6b849">digits</a></td></tr>
-<tr class="memdesc:a264ee3b2d320bdba897ba93b72a6b849"><td class="mdescLeft">&#160;</td><td class="mdescRight">digits of stored number <br/></td></tr>
-<tr class="separator:a264ee3b2d320bdba897ba93b72a6b849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Universal Values</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrpf308c32226026625205207ec76528501"></a>Values with the same representation with any base.</p>
@@ -353,53 +322,6 @@ static const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt;&
 <tr class="separator:a5f7755ea44ed24ff4a28c96ef5bb3a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a58a4b2ff967a9637d426403d3a93ad07"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class B &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::<a class="el" href="classcjr_1_1number.html">number</a> </td>
-          <td>(</td>
-          <td class="paramtype">const B &amp;&#160;</td>
-          <td class="paramname"><em>initValue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool &amp;&#160;</td>
-          <td class="paramname"><em>zeroBase</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs new number with given value and zero as base. </p>
-<p>It was meant to create universal values (see <a class="el" href="classcjr_1_1number.html#a6327e5cfd5458aff794403400dfe0c13">ONE</a> and <a class="el" href="classcjr_1_1number.html#a0a6d68bdc0fda6943a5d8e0d47fdeb03">ZERO</a>) which have the same representation despite of number's base </p>
-<dl class="section warning"><dt>Warning</dt><dd>While implementation of this constructor omits checking base validity it shall not be used in the code </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">initValue</td><td>the value which the new number will be initialized with, in decimal </td></tr>
-    <tr><td class="paramname">zeroBasethis</td><td>parameter is making possible for compiler to recognize this constructor </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="aeaf08725e9ae255c3ee25045bbd235f1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -467,6 +389,58 @@ template&lt;class B &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac876a5bc8916d2ddb19a1d514ac3f5c0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;&#160;</td>
+          <td class="paramname"><em>numberToAdd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds given number to the number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberToAdd</td><td><a class="el" href="classcjr_1_1number.html">number</a> to add to the <a class="el" href="classcjr_1_1number.html">number</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4a3990a55896edfa85639c57d8c3c699"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>valueToAdd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds given std value to the number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueToAdd</td><td>std value to add to the <a class="el" href="classcjr_1_1number.html">number</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ac817352113440eee2ceddc383d0dcf2d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -626,6 +600,84 @@ template&lt;class B &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a9bfb2e6eb2297527aa34f21c84c92c1c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;&#160;</td>
+          <td class="paramname"><em>numberToMultiply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies the number by given <a class="el" href="classcjr_1_1number.html">number</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberToMultiply</td><td><a class="el" href="classcjr_1_1number.html">number</a> to multiply the number by </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aea945b8aecaad22c99b954bea3af1179"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>valueToMultiply</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies the number by given std value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueToMultiply</td><td>std value to multiply the number by </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ace65049054fa8b2a7498a3f2af7b7298"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::power </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>power</em> = <code>2</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raises the number to the given power. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">power</td><td>power to raise the number to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aab0fd6f29b9b3ab88fbead6aa7d4dba8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -649,6 +701,7 @@ template&lt;class B &gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>For convinience the library has overloaded operator&lt;&lt; for printing <a class="el" href="classcjr_1_1number.html">number</a> </dd></dl>
 
 </div>
 </div>
@@ -704,6 +757,85 @@ template&lt;class B &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa29378479836924b1110f40570198ada"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcjr_1_1number.html">number</a>&lt; B &gt; &amp;&#160;</td>
+          <td class="paramname"><em>numberToSubtract</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtracts given number from the number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numberToSubtract</td><td><a class="el" href="classcjr_1_1number.html">number</a> to subtract from the <a class="el" href="classcjr_1_1number.html">number</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af95e527ca950399a3af5dbf12d01afc5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::subtract </td>
+          <td>(</td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>valueToSubtract</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtracts given std value from the number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueToSubtract</td><td>std value to subtract from the <a class="el" href="classcjr_1_1number.html">number</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5f2aeb5b369b048c53e2a0c209a5476e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcjr_1_1number.html">cjr::number</a>&lt; B &gt;::timesBase </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>power</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies the number by given power of its base. </p>
+<p>Virtually it is adding 0(or few zeros) at the end of the number </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">power</td><td>power of the base </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a4eb89bde4b4866e761170d6c47dd46ab"></a>
 <div class="memitem">
 <div class="memproto">
@@ -735,12 +867,13 @@ template&lt;class B &gt; </div>
 <li>src/numbers/implementation/number.cpp</li>
 <li>src/numbers/implementation/numberAddSubtract.cpp</li>
 <li>src/numbers/implementation/numberComparison.cpp</li>
+<li>src/numbers/implementation/numberMultiplyDivide.cpp</li>
 <li>src/numbers/implementation/numberUtils.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 10 2018 20:12:48 for cjr by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 11 2018 12:45:34 for cjr by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

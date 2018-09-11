@@ -12,11 +12,13 @@ namespace cjr {
     /// \tparam B defines maximal base of the number, see \ref baseRange
     template <class B = baseRange::medium>
     class number {
-    private:
+    public:
         /// \brief List type for storing digits of \ref number
         using digitList = std::list<B>;
         /// \brief Iterator type for storing iterators for \ref digitList
         using digitIterator = typename std::list<B>::iterator;
+
+    private:
 
         /// \brief Constructs new number with given value and zero as base
         /// \details It was meant to create universal values (see \ref ONE and \ref ZERO) which have the same representation despite of number's base
@@ -40,10 +42,24 @@ namespace cjr {
         void addAt(digitIterator i, const B & baseToUse, const B & valueToAdd = 1);
         void subtract(const number<B> & numberToSubtract, const B & baseToUse);
         void subtractAt(digitIterator i, const B & baseToUse, const B & valueToSubtract = 1);
-        void calculateValueAndProceedOffload(digitIterator & i, const B & newValue,  const B & baseToUse);
+
+        void calculateValueAndProcessOffload(digitIterator & i, const B & newValue, const B & baseToUse);
         void makeCalculations(
                 void (number<B>::* calcFunction)(digitIterator, const B &, const B &),
                 const digitList & extraDigits, const B & baseToUse);
+
+        /// \brief Implementation of exponentiation by squaring algorithm for \ref number
+        /// \param n \ref number to exponent
+        /// \param p \ref power
+        /// \return n to the power of p as \ref number
+        static number<B> swiftPower(number<B> n, unsigned int p);
+
+        ///@}
+
+        /// \name Comparison Utils
+        /// \brief Internal methods for comparison algorithms
+        ///@{
+
         const bool makeComparison(const number<B> & n, bool bigger, const bool & orEqual = false) const;
 
         ///@}
@@ -104,6 +120,7 @@ namespace cjr {
         const std::string toString(const bool & withSeparators = false) const;
         /// \brief prints to the console value of \ref toString(bool) with new line at the end
         /// \param withSeparators when true each digit will be separated with '`'
+        /// \note For convinience the library has overloaded operator<< for printing \ref number
         void print(const bool & withSeparators = false) const;
 
         ///@}
@@ -120,10 +137,12 @@ namespace cjr {
         /// \brief Post-increments the number
         const number<B> operator++(int);
         /// \brief Adds given number to the number
+        /// \param numberToAdd \ref number to add to the \ref number
         void add(const number<B> & numberToAdd);
         /// \brief Adds two given numbers and returns their sum
         number<B> operator+(const number<B> & numberToAdd) const;
         /// \brief Adds given std value to the number
+        /// \param valueToAdd std value to add to the \ref number
         void add(const B & valueToAdd);
         /// \brief Adds given number and std value and returns their sum as a \ref number
         number<B> operator+(const B & valueToAdd) const;
@@ -135,13 +154,33 @@ namespace cjr {
         /// \brief Post-decrements the number
         const number<B> operator--(int);
         /// \brief Subtracts given number from the number
+        /// \param numberToSubtract \ref number to subtract from the \ref number
         void subtract(const number<B> & numberToSubtract);
         /// \brief Subtracts two given numbers and returns their difference
         number<B> operator-(const number<B> & numberToSubtract) const;
         /// \brief Subtracts given std value from the number
+        /// \param valueToSubtract std value to subtract from the \ref number
         void subtract(const B & valueToSubtract);
         /// \brief Subtracts std value from given number and returns their difference as a \ref number
         number<B> operator-(const B & valueToSubtract) const;
+
+        /// \brief Multiplies the number by given \ref number
+        /// \param numberToMultiply \ref number to multiply the number by
+        void multiply(const number<B> & numberToMultiply);
+        /// \brief Multiplies the number by given \ref number
+        void operator*(const number<B> & numberToMultiply);
+        /// \brief Multiplies the number by given std value
+        /// \param valueToMultiply std value to multiply the number by
+        void multiply(const B & valueToMultiply);
+        /// \brief Multiplies the number by given std value
+        void operator*(const B & valueToMultiply);
+        /// \brief Raises the number to the given power
+        /// \param power power to raise the number to
+        void power(unsigned int power = 2);
+        /// \brief Multiplies the number by given power of its base
+        /// \details Virtually it is adding 0(or few zeros) at the end of the number
+        /// \param power power of the base
+        void timesBase(unsigned int power = 1);
 
         ///@}
 
@@ -192,6 +231,7 @@ namespace cjr {
     template class number<baseRange::big>;
     template class number<baseRange::huge>;
 
+    /// \brief Prints \ref number to std::ostream
     template <class B>
     std::ostream & operator<<(std::ostream & os, const number<B> & n) {
         os << n.toString();
