@@ -28,6 +28,14 @@ namespace cjr {
         public:
             differentBaseException() : exception("cjr::numbers have different bases") {}
         };
+
+        /// \brief Exception to be thrown when division by 0 occurs
+        class divisionByZeroException : public exception {
+        public:
+            divisionByZeroException() : exception(
+                    "cjr::number to be divided by 0"
+                    ) {};
+        };
     }
 }
 

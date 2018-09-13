@@ -54,6 +54,13 @@ namespace cjr {
         /// \return n to the power of p as \ref number
         static number<B> swiftPower(number<B> n, unsigned int p);
 
+        /// \brief Returns sign of result of multiplication or division of given numbers
+        static const bool getSignAfterMultiplication(const number<B> & n1, const number<B> & n2);
+
+        /// \brief Makes integer division of given number and given divisor
+        /// \param returnRemainder When true method return the remainder of division instead of quotient
+        static const number<B> integerDivision(const number<B> & dividend, number<B> divisor, const bool & returnRemainder = false);
+
         ///@}
 
         /// \name Comparison Utils
@@ -139,12 +146,12 @@ namespace cjr {
         /// \brief Adds given number to the number
         /// \param numberToAdd \ref number to add to the \ref number
         void add(const number<B> & numberToAdd);
-        /// \brief Adds two given numbers and returns their sum
+        /// \brief Returns the value of adding two given numbers
         number<B> operator+(const number<B> & numberToAdd) const;
         /// \brief Adds given std value to the number
         /// \param valueToAdd std value to add to the \ref number
         void add(const B & valueToAdd);
-        /// \brief Adds given number and std value and returns their sum as a \ref number
+        /// \brief Returns the value of adding given number and std value
         number<B> operator+(const B & valueToAdd) const;
 
         /// \brief Decrements the number
@@ -156,31 +163,53 @@ namespace cjr {
         /// \brief Subtracts given number from the number
         /// \param numberToSubtract \ref number to subtract from the \ref number
         void subtract(const number<B> & numberToSubtract);
-        /// \brief Subtracts two given numbers and returns their difference
+        /// \brief Returns the value of subtracting two given numbers
         number<B> operator-(const number<B> & numberToSubtract) const;
         /// \brief Subtracts given std value from the number
         /// \param valueToSubtract std value to subtract from the \ref number
         void subtract(const B & valueToSubtract);
-        /// \brief Subtracts std value from given number and returns their difference as a \ref number
+        /// \brief Returns the value of subtracting std value from given number
         number<B> operator-(const B & valueToSubtract) const;
 
         /// \brief Multiplies the number by given \ref number
         /// \param numberToMultiply \ref number to multiply the number by
         void multiply(const number<B> & numberToMultiply);
-        /// \brief Multiplies the number by given \ref number
-        void operator*(const number<B> & numberToMultiply);
+        /// \brief Returns the value of multiplying the number by given \ref number
+        number<B> operator*(const number<B> & numberToMultiply) const;
         /// \brief Multiplies the number by given std value
         /// \param valueToMultiply std value to multiply the number by
         void multiply(const B & valueToMultiply);
-        /// \brief Multiplies the number by given std value
-        void operator*(const B & valueToMultiply);
+        /// \brief Returns the value of multiplying the number by given std value
+        number<B> operator*(const B & valueToMultiply) const;
         /// \brief Raises the number to the given power
         /// \param power power to raise the number to
         void power(unsigned int power = 2);
         /// \brief Multiplies the number by given power of its base
         /// \details Virtually it is adding 0(or few zeros) at the end of the number
-        /// \param power power of the base
-        void timesBase(unsigned int power = 1);
+        /// \sa \ref divideByBase()
+        /// \param power power of the base to use (number of zeros to add)
+        void multiplyByBase(unsigned int power = 1);
+
+        /// \brief Divides the number by given \ref number
+        /// \param divisor
+        void divide(number<B> divisor);
+        /// \brief Returns the result of dividing the number by given \ref number
+        number<B> operator/(const number<B> & divisor) const;
+        /// \brief Divides the number by given std value
+        /// \param divisor
+        void divide(const B & divisor);
+        /// \brief Returns the result of dividing the number by given std value
+        number<B> operator/(const B & divisor) const;
+        /// \brief Returns remainder of dividing the number by given \ref number
+        const number<B> remainder(number<B> divisor) const;
+        /// \brief Returns remainder of dividing the number by given \ref number
+        const number<B> operator%(number<B> divisor) const;
+        /// \brief Divides the number by given power of its base
+        /// \details Virtually it is removing 0(or few zeros) from the end of the number
+        /// \sa \ref multiplyByBase()
+        /// \param power power of the base to use (number of zeros to remove)
+        /// \return Removed digits as \ref number or 0 if the number was initially equal to 0
+        const number<B> divideByBase(unsigned int power = 1);
 
         ///@}
 

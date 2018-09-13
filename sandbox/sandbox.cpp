@@ -10,13 +10,5 @@ int main() {
 
     // here you can test cjr
 
-//    cjr::number<> a = -145002123, b = 1667778088;
-//    a.multiply(b);
-//    a.print();
-
-    cjr::number<> a = 678;
-    a.power(123);
-    a.print();
-
     return 0;
 }

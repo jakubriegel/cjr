@@ -47,9 +47,9 @@ TEST_F(NumberMultiplyDivideTest, RaisesNumberToThePower) {
 }
 
 TEST_F(NumberMultiplyDivideTest, MultipliesNumberByBase) {
-    a.timesBase();
+    a.multiplyByBase();
     EXPECT_EQ(a, cjr::number<>(50));
 
-    c.timesBase(5);
+    c.multiplyByBase(5);
     EXPECT_EQ(c, cjr::number<>(-1000000));
 }
