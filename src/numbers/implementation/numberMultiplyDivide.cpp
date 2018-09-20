@@ -124,7 +124,6 @@ namespace cjr {
 
         if(divisor == number::ZERO) throw exception::divisionByZeroException();
         else if(this->isZero()) this->setValue(0);
-        else if(divisor > *this) this->setValue(0);
         else if(*this == divisor) this->setValue(1);
         else if(divisor == number::ONE) return;
         else this->setValue(number<B>::integerDivision(*this, divisor));
@@ -163,17 +162,15 @@ namespace cjr {
 
     template<class B>
     const number<B> number<B>::divideByBase(unsigned int power) {
-        auto result = number<B>(0, this->base);
-        if(!this->isZero()) while(power--) {
-                result.multiplyByBase();
-                result.add(this->digits.back());
+        const auto removed = this->remainder(std::pow(this->base, power));
 
-                this->digits.pop_back();
+        if(!this->isZero()) while(power--) {
+                this->digits.pop_front();
                 if(this->digits.empty()) {
-                    this->digits.push_front(0);
+                    this->setValue(0);
                     break;
                 }
         }
-        return result;
+        return removed;
     }
 }
